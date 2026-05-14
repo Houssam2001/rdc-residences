@@ -2,19 +2,25 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-10 py-5 bg-black/20 backdrop-blur-xl border-b border-white/10 transition-all">
-      <Link href="/" className="text-xl font-bold tracking-[0.3em] uppercase text-white hover:opacity-80 transition-opacity">
-        RDC
-      </Link>
-      <div className="hidden md:flex items-center gap-10 text-[13px] uppercase tracking-[0.2em] font-medium text-white/80">
-        <Link href="/" className="hover:text-white transition-colors">Home</Link>
-        <Link href="/apartments" className="hover:text-white transition-colors">The Collection</Link>
-        <Link href="/about" className="hover:text-white transition-colors">About</Link>
-        <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
-      </div>
-      <Link href="/apartments" className="text-[11px] bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2.5 uppercase tracking-[0.2em] font-medium text-white hover:bg-white/20 transition-all">
-        Explore
-      </Link>
-    </nav>
+    <div className="fixed top-5 left-1/2 -translate-x-1/2 z-50">
+      <nav className="flex items-center gap-1 bg-black/40 backdrop-blur-2xl border border-white/15 rounded-full px-2 py-1.5 shadow-2xl shadow-black/30">
+        <Link href="/" className="text-[11px] font-bold tracking-[0.25em] uppercase text-white px-4 py-2 hover:opacity-70 transition-opacity">
+          RDC
+        </Link>
+        <div className="w-[1px] h-4 bg-white/15" />
+        <Link href="/apartments" className="text-[10px] uppercase tracking-[0.15em] font-medium text-white/70 px-3 py-2 hover:text-white transition-colors rounded-full hover:bg-white/5">
+          Résidences
+        </Link>
+        <Link href="/about" className="text-[10px] uppercase tracking-[0.15em] font-medium text-white/70 px-3 py-2 hover:text-white transition-colors rounded-full hover:bg-white/5">
+          À Propos
+        </Link>
+        <Link href="/contact" className="text-[10px] uppercase tracking-[0.15em] font-medium text-white/70 px-3 py-2 hover:text-white transition-colors rounded-full hover:bg-white/5">
+          Contact
+        </Link>
+        <Link href="/apartments" className="text-[10px] bg-[#005433] rounded-full px-5 py-2 uppercase tracking-[0.15em] font-semibold text-white hover:bg-[#006a40] transition-all ml-1">
+          Explorer
+        </Link>
+      </nav>
+    </div>
   );
 }

@@ -45,10 +45,10 @@ export default function InteractiveDirectory({ apartments }: { apartments: Apart
 
       {/* Hero */}
       <section className="dir-hero relative w-full pt-40 pb-20 px-6 md:px-20 text-center opacity-0">
-        <p className="text-xs uppercase tracking-[0.4em] text-white/50 mb-6 font-medium">Our Portfolio</p>
-        <h1 className="text-5xl md:text-8xl font-bold tracking-tight mb-6">The Collection</h1>
+        <p className="text-xs uppercase tracking-[0.4em] text-white/50 mb-6 font-medium">Notre Portfolio</p>
+        <h1 className="text-5xl md:text-8xl font-bold tracking-tight mb-6">La Collection</h1>
         <p className="text-lg text-white/60 max-w-2xl mx-auto font-light">
-          Explore our curated selection of premium residences. Hover to preview, click to discover.
+          Explorez notre sélection de résidences premium. Survolez pour apercevoir, cliquez pour découvrir.
         </p>
       </section>
 
@@ -59,7 +59,7 @@ export default function InteractiveDirectory({ apartments }: { apartments: Apart
             <Link
               key={apt.slug + idx}
               href={`/apartments/${apt.slug}`}
-              className="reveal-item group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm cursor-pointer"
+              className="reveal-item group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm cursor-pointer hover:border-[#005433]/40 transition-all duration-500"
               onMouseEnter={() => setHoveredIdx(idx)}
               onMouseLeave={() => setHoveredIdx(null)}
             >
@@ -77,7 +77,7 @@ export default function InteractiveDirectory({ apartments }: { apartments: Apart
                     {apt.name}
                   </h3>
                 </div>
-                <ArrowRight className="w-5 h-5 opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500" />
+                <ArrowRight className="w-5 h-5 text-[#005433] opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500" />
               </div>
             </Link>
           ))}
@@ -87,11 +87,11 @@ export default function InteractiveDirectory({ apartments }: { apartments: Apart
       {/* Footer */}
       <footer className="relative bg-black border-t border-white/10 py-12 px-6 md:px-20">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-white/30 gap-4">
-          <p>&copy; {new Date().getFullYear()} RDC Residences. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} RDC Résidences. Tous droits réservés.</p>
           <div className="flex gap-8">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <Link href="#" className="hover:text-white transition-colors">Privacy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms</Link>
+            <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
+            <Link href="#" className="hover:text-white transition-colors">Confidentialité</Link>
+            <Link href="#" className="hover:text-white transition-colors">Conditions</Link>
           </div>
         </div>
       </footer>

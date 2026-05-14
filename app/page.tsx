@@ -100,20 +100,20 @@ export default function LandingPage() {
 
   const faqs = [
     {
-      q: "What types of residences are available?",
-      a: "RDC Residences offers a curated selection of premium apartments ranging from studios to spacious 4-bedroom penthouses, each designed with modern architecture and high-end finishes.",
+      q: "Quels types de résidences sont disponibles ?",
+      a: "RDC Résidences propose une sélection de logements premium allant des studios aux penthouses spacieux de 4 chambres, chacun conçu avec une architecture moderne et des finitions haut de gamme.",
     },
     {
-      q: "Are the properties accessible to foreign buyers?",
-      a: "Yes, all RDC properties are eligible for foreign ownership under the current investment framework. Our advisory team can guide you through the entire process.",
+      q: "Les propriétés sont-elles accessibles aux acheteurs étrangers ?",
+      a: "Oui, toutes les propriétés RDC sont éligibles à l'acquisition par des étrangers dans le cadre réglementaire en vigueur. Notre équipe vous accompagne tout au long du processus.",
     },
     {
-      q: "What amenities are included?",
-      a: "Residents enjoy access to landscaped gardens, a private pool, 24/7 security, covered parking, and proximity to beaches, shopping, and nature reserves.",
+      q: "Quels sont les équipements inclus ?",
+      a: "Les résidents bénéficient de jardins paysagers, d'une piscine privée, d'une sécurité 24h/24, de parkings couverts et de la proximité des plages, commerces et réserves naturelles.",
     },
     {
-      q: "Can I schedule a private viewing?",
-      a: "Absolutely. Contact our advisory team via phone or the inquiry form and we will arrange a private tour at your convenience.",
+      q: "Puis-je planifier une visite privée ?",
+      a: "Absolument. Contactez notre équipe par téléphone ou via le formulaire et nous organiserons une visite privée à votre convenance.",
     },
   ];
 
@@ -131,18 +131,18 @@ export default function LandingPage() {
         {/* ===== HERO ===== */}
         <section className="relative h-screen flex flex-col items-center justify-center text-center px-6 pointer-events-none">
           <div className="pointer-events-auto">
-            <p className="text-sm md:text-base uppercase tracking-[0.4em] text-white/80 mb-6 font-light">Premium Residential Development</p>
+            <p className="text-sm md:text-base uppercase tracking-[0.4em] text-white/80 mb-6 font-light">Développement Résidentiel Premium</p>
             <h1 className="text-5xl md:text-8xl lg:text-[9rem] font-bold tracking-tighter leading-[0.9] mb-8 drop-shadow-[0_4px_40px_rgba(0,0,0,0.6)]">
-              RDC<br />Residences
+              RDC<br />Résidences
             </h1>
             <p className="text-lg md:text-2xl text-white/90 font-light max-w-2xl mx-auto mb-12 drop-shadow-lg">
-              Where modern architecture meets nature. Discover a new standard of living.
+              Là où l&apos;architecture moderne rencontre la nature. Découvrez un nouveau standard de vie.
             </p>
             <Link
               href="/apartments"
-              className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full text-sm uppercase tracking-[0.2em] font-medium hover:bg-white/25 transition-all"
+              className="inline-flex items-center gap-3 bg-[#005433] backdrop-blur-md border border-[#005433]/60 text-white px-8 py-4 rounded-full text-sm uppercase tracking-[0.2em] font-medium hover:bg-[#006a40] transition-all shadow-lg shadow-[#005433]/20"
             >
-              Explore Collection
+              Explorer la Collection
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -154,22 +154,22 @@ export default function LandingPage() {
         {/* ===== ABOUT ===== */}
         <section className="relative min-h-screen flex items-center px-6 md:px-20 py-32">
           <div className="reveal max-w-5xl mx-auto bg-black/60 backdrop-blur-xl rounded-3xl border border-white/10 p-10 md:p-20">
-            <p className="text-xs uppercase tracking-[0.4em] text-white/50 mb-8 font-medium">About the Project</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-white/50 mb-8 font-medium">À Propos du Projet</p>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-10">
-              A Vision of<br />Timeless Living
+              Une Vision de<br />Vie Intemporelle
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <p className="text-lg text-white/70 font-light leading-relaxed">
-                RDC Residences is a masterfully planned community set amidst lush greenery and modern infrastructure. Every home is designed to maximize natural light, open space, and connection to the environment.
+                RDC Résidences est une communauté magistralement planifiée au cœur d&apos;une verdure luxuriante et d&apos;une infrastructure moderne. Chaque logement est conçu pour maximiser la lumière naturelle, l&apos;espace ouvert et la connexion avec l&apos;environnement.
               </p>
               <p className="text-lg text-white/70 font-light leading-relaxed">
-                From the precision of our architecture to the serenity of our landscaping, every detail has been considered to create a sanctuary where families thrive and investments grow.
+                De la précision de notre architecture à la sérénité de nos aménagements paysagers, chaque détail a été pensé pour créer un sanctuaire où les familles s&apos;épanouissent et les investissements prospèrent.
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-10 border-t border-white/10">
               <div className="text-center">
                 <p className="text-4xl font-bold mb-2">43+</p>
-                <p className="text-xs uppercase tracking-widest text-white/50">Residences</p>
+                <p className="text-xs uppercase tracking-widest text-white/50">Résidences</p>
               </div>
               <div className="text-center">
                 <p className="text-4xl font-bold mb-2">5.2</p>
@@ -177,11 +177,11 @@ export default function LandingPage() {
               </div>
               <div className="text-center">
                 <p className="text-4xl font-bold mb-2">100%</p>
-                <p className="text-xs uppercase tracking-widest text-white/50">Landscaped</p>
+                <p className="text-xs uppercase tracking-widest text-white/50">Paysagé</p>
               </div>
               <div className="text-center">
                 <p className="text-4xl font-bold mb-2">24/7</p>
-                <p className="text-xs uppercase tracking-widest text-white/50">Security</p>
+                <p className="text-xs uppercase tracking-widest text-white/50">Sécurité</p>
               </div>
             </div>
           </div>
@@ -191,19 +191,19 @@ export default function LandingPage() {
         <section className="relative min-h-screen flex items-center px-6 md:px-20 py-32">
           <div className="max-w-6xl mx-auto w-full">
             <div className="reveal text-center mb-20">
-              <p className="text-xs uppercase tracking-[0.4em] text-white/50 mb-6 font-medium">Why RDC</p>
+              <p className="text-xs uppercase tracking-[0.4em] text-white/50 mb-6 font-medium">Pourquoi RDC</p>
               <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-                Built for Excellence
+                Conçu pour l&apos;Excellence
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { icon: MapPin, title: "Prime Location", desc: "Strategically positioned near beaches, nature reserves, and urban amenities for the ultimate lifestyle balance." },
-                { icon: Shield, title: "Trusted Quality", desc: "European-standard construction with premium materials, solid wood finishes, and high-end sanitary fittings." },
-                { icon: Gem, title: "Smart Investment", desc: "Properties in a high-demand, rapidly appreciating area with strong rental yields and capital growth." },
-                { icon: TreePine, title: "Green Living", desc: "Surrounded by mature landscaping, tree-lined avenues, and private gardens that connect you to nature." },
-                { icon: Phone, title: "Concierge Service", desc: "Dedicated property management and concierge services to ensure a seamless living experience." },
-                { icon: Mail, title: "Global Access", desc: "Accessible to international buyers with full advisory support from initial inquiry to handover." },
+                { icon: MapPin, title: "Emplacement Privilégié", desc: "Stratégiquement situé près des plages, réserves naturelles et commodités urbaines pour un équilibre de vie optimal." },
+                { icon: Shield, title: "Qualité Certifiée", desc: "Construction aux standards européens avec des matériaux premium, finitions bois massif et équipements sanitaires haut de gamme." },
+                { icon: Gem, title: "Investissement Intelligent", desc: "Propriétés dans une zone à forte demande avec des rendements locatifs solides et une croissance du capital." },
+                { icon: TreePine, title: "Vie Verte", desc: "Entouré d'aménagements paysagers matures, d'allées arborées et de jardins privés qui vous connectent à la nature." },
+                { icon: Phone, title: "Service Conciergerie", desc: "Gestion immobilière dédiée et services de conciergerie pour une expérience de vie sans souci." },
+                { icon: Mail, title: "Accès International", desc: "Accessible aux acheteurs internationaux avec un accompagnement complet de la demande à la remise des clés." },
               ].map((feature, i) => (
                 <div key={i} className="reveal bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 group">
                   <feature.icon className="w-8 h-8 text-white/40 mb-6 group-hover:text-white/80 transition-colors" />
@@ -219,16 +219,16 @@ export default function LandingPage() {
         <section className="relative min-h-[80vh] flex items-center justify-center px-6">
           <div className="reveal text-center max-w-3xl">
             <h2 className="text-5xl md:text-8xl font-bold tracking-tight mb-8 drop-shadow-lg">
-              Discover Your<br />Next Home
+              Découvrez Votre<br />Prochaine Maison
             </h2>
             <p className="text-lg md:text-xl text-white/70 font-light mb-12 max-w-xl mx-auto">
-              Browse the full collection of premium apartments and find the one that speaks to you.
+              Parcourez la collection complète d&apos;appartements premium et trouvez celui qui vous correspond.
             </p>
             <Link
               href="/apartments"
-              className="inline-flex items-center gap-4 bg-white text-black px-12 py-6 rounded-full text-base uppercase tracking-[0.2em] font-bold hover:scale-105 transition-transform shadow-2xl shadow-white/10"
+              className="inline-flex items-center gap-4 bg-[#005433] text-white px-12 py-6 rounded-full text-base uppercase tracking-[0.2em] font-bold hover:bg-[#006a40] hover:scale-105 transition-all shadow-2xl shadow-[#005433]/20"
             >
-              View All Apartments
+              Voir Tous les Appartements
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -240,7 +240,7 @@ export default function LandingPage() {
             <div className="reveal text-center mb-16">
               <p className="text-xs uppercase tracking-[0.4em] text-white/50 mb-6 font-medium">FAQ</p>
               <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-                Common Questions
+                Questions Fréquentes
               </h2>
             </div>
             <div className="flex flex-col gap-4">
@@ -274,17 +274,17 @@ export default function LandingPage() {
           <div className="reveal max-w-5xl mx-auto w-full bg-black/60 backdrop-blur-xl rounded-3xl border border-white/10 p-10 md:p-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
               <div>
-                <p className="text-xs uppercase tracking-[0.4em] text-white/50 mb-6 font-medium">Get in Touch</p>
+                <p className="text-xs uppercase tracking-[0.4em] text-white/50 mb-6 font-medium">Nous Contacter</p>
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
-                  Contact Our Advisory Team
+                  Contactez Notre Équipe
                 </h2>
                 <p className="text-lg text-white/60 font-light leading-relaxed mb-10">
-                  Whether you're looking for your dream home or a prime investment opportunity, our team is ready to assist you every step of the way.
+                  Que vous recherchiez votre maison de rêve ou une opportunité d&apos;investissement, notre équipe est prête à vous accompagner à chaque étape.
                 </p>
                 <div className="flex flex-col gap-4 text-white/70">
                   <div className="flex items-center gap-4">
                     <Phone className="w-5 h-5 text-white/40" />
-                    <span className="font-light">+230 5XXX XXXX</span>
+                    <span className="font-light">+212 5XXX XXXX</span>
                   </div>
                   <div className="flex items-center gap-4">
                     <Mail className="w-5 h-5 text-white/40" />
@@ -299,29 +299,29 @@ export default function LandingPage() {
               <form className="flex flex-col gap-4">
                 <input
                   type="text"
-                  placeholder="Full Name"
+                  placeholder="Nom complet"
                   className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all text-sm"
                 />
                 <input
                   type="email"
-                  placeholder="Email Address"
+                  placeholder="Adresse e-mail"
                   className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all text-sm"
                 />
                 <input
                   type="tel"
-                  placeholder="Phone Number"
+                  placeholder="Numéro de téléphone"
                   className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all text-sm"
                 />
                 <textarea
-                  placeholder="Your message..."
+                  placeholder="Votre message..."
                   rows={4}
                   className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all text-sm resize-none"
                 ></textarea>
                 <button
                   type="button"
-                  className="w-full bg-white text-black font-bold py-4 rounded-xl text-sm uppercase tracking-[0.2em] hover:bg-zinc-200 transition-colors mt-2"
+                  className="w-full bg-[#005433] text-white font-bold py-4 rounded-xl text-sm uppercase tracking-[0.2em] hover:bg-[#006a40] transition-colors mt-2 shadow-lg shadow-[#005433]/20"
                 >
-                  Send Message
+                  Envoyer le Message
                 </button>
               </form>
             </div>
@@ -337,32 +337,32 @@ export default function LandingPage() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
               <div className="md:col-span-2">
-                <h3 className="text-2xl font-bold tracking-widest uppercase mb-4">RDC Residences</h3>
+                <h3 className="text-2xl font-bold tracking-widest uppercase mb-4">RDC Résidences</h3>
                 <p className="text-white/50 font-light leading-relaxed max-w-sm">
-                  A masterfully planned community where modern architecture meets nature. Premium living, redefined.
+                  Une communauté magistralement planifiée où l&apos;architecture moderne rencontre la nature. L&apos;habitat premium, redéfini.
                 </p>
               </div>
               <div>
                 <h4 className="text-xs uppercase tracking-[0.3em] text-white/40 mb-6 font-medium">Navigation</h4>
                 <ul className="flex flex-col gap-3 text-white/60 font-light">
-                  <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-                  <li><Link href="/apartments" className="hover:text-white transition-colors">The Collection</Link></li>
-                  <li><Link href="#" className="hover:text-white transition-colors">About</Link></li>
-                  <li><Link href="#" className="hover:text-white transition-colors">Contact</Link></li>
+                  <li><Link href="/" className="hover:text-white transition-colors">Accueil</Link></li>
+                  <li><Link href="/apartments" className="hover:text-white transition-colors">La Collection</Link></li>
+                  <li><Link href="/about" className="hover:text-white transition-colors">À Propos</Link></li>
+                  <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="text-xs uppercase tracking-[0.3em] text-white/40 mb-6 font-medium">Legal</h4>
                 <ul className="flex flex-col gap-3 text-white/60 font-light">
-                  <li><Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-                  <li><Link href="#" className="hover:text-white transition-colors">Terms of Service</Link></li>
-                  <li><Link href="#" className="hover:text-white transition-colors">Cookie Policy</Link></li>
+                  <li><Link href="#" className="hover:text-white transition-colors">Politique de Confidentialité</Link></li>
+                  <li><Link href="#" className="hover:text-white transition-colors">Conditions d&apos;Utilisation</Link></li>
+                  <li><Link href="#" className="hover:text-white transition-colors">Politique de Cookies</Link></li>
                 </ul>
               </div>
             </div>
             <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-white/30">
-              <p>&copy; {new Date().getFullYear()} RDC Residences. All rights reserved.</p>
-              <p className="mt-4 md:mt-0">Designed with precision.</p>
+              <p>&copy; {new Date().getFullYear()} RDC Résidences. Tous droits réservés.</p>
+              <p className="mt-4 md:mt-0">Conçu avec précision.</p>
             </div>
           </div>
         </footer>

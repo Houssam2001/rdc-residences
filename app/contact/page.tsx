@@ -39,10 +39,10 @@ export default function ContactPage() {
 
       {/* Hero */}
       <section className="contact-hero relative w-full pt-40 pb-24 px-6 md:px-20 text-center opacity-0">
-        <p className="text-xs uppercase tracking-[0.4em] text-white/50 mb-6 font-medium">Get in Touch</p>
-        <h1 className="text-5xl md:text-8xl font-bold tracking-tight mb-8">Contact Us</h1>
+        <p className="text-xs uppercase tracking-[0.4em] text-white/50 mb-6 font-medium">Nous Contacter</p>
+        <h1 className="text-5xl md:text-8xl font-bold tracking-tight mb-8">Contactez-Nous</h1>
         <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto font-light">
-          Whether you&apos;re looking for your dream home or a prime investment, our advisory team is ready to assist.
+          Que vous recherchiez votre maison de rêve ou un investissement de choix, notre équipe est à votre écoute.
         </p>
       </section>
 
@@ -52,12 +52,12 @@ export default function ContactPage() {
 
           {/* Left — Info */}
           <div>
-            <p className="text-xs uppercase tracking-[0.4em] text-white/40 mb-8 font-medium">Reach Out</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-white/40 mb-8 font-medium">Nous Joindre</p>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-10 leading-tight">
-              We&apos;d love to hear from you.
+              Nous serions ravis d&apos;échanger avec vous.
             </h2>
             <p className="text-lg text-white/60 font-light leading-relaxed mb-12">
-              Our dedicated advisory team is available to guide you through every step — from initial inquiry to final handover. Schedule a private viewing or request detailed floor plans and pricing.
+              Notre équipe dédiée est disponible pour vous guider à chaque étape — de la demande initiale à la remise des clés. Planifiez une visite privée ou demandez des plans détaillés et les tarifs.
             </p>
 
             <div className="flex flex-col gap-6">
@@ -66,8 +66,8 @@ export default function ContactPage() {
                   <Phone className="w-5 h-5 text-white/60" />
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Phone</p>
-                  <p className="text-lg font-medium">+230 5XXX XXXX</p>
+                  <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Téléphone</p>
+                  <p className="text-lg font-medium">+212 5XXX XXXX</p>
                 </div>
               </div>
 
@@ -76,7 +76,7 @@ export default function ContactPage() {
                   <Mail className="w-5 h-5 text-white/60" />
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Email</p>
+                  <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">E-mail</p>
                   <p className="text-lg font-medium">info@rdc-residences.com</p>
                 </div>
               </div>
@@ -86,8 +86,8 @@ export default function ContactPage() {
                   <MapPin className="w-5 h-5 text-white/60" />
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Address</p>
-                  <p className="text-lg font-medium">RDC Development, Coastal District</p>
+                  <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Adresse</p>
+                  <p className="text-lg font-medium">RDC Development, Quartier Côtier</p>
                 </div>
               </div>
 
@@ -96,8 +96,8 @@ export default function ContactPage() {
                   <Clock className="w-5 h-5 text-white/60" />
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Office Hours</p>
-                  <p className="text-lg font-medium">Mon – Sat: 9:00 AM – 6:00 PM</p>
+                  <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Horaires</p>
+                  <p className="text-lg font-medium">Lun – Sam : 9h00 – 18h00</p>
                 </div>
               </div>
             </div>
@@ -105,52 +105,52 @@ export default function ContactPage() {
 
           {/* Right — Form */}
           <div className="reveal bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 p-10 md:p-12">
-            <h3 className="text-2xl font-bold mb-2">Send us a message</h3>
-            <p className="text-sm text-white/50 mb-8 font-light">Fill out the form and our team will get back to you within 24 hours.</p>
+            <h3 className="text-2xl font-bold mb-2">Envoyez-nous un message</h3>
+            <p className="text-sm text-white/50 mb-8 font-light">Remplissez le formulaire et notre équipe vous répondra sous 24 heures.</p>
 
             <form className="flex flex-col gap-5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <input
                   type="text"
-                  placeholder="First Name"
+                  placeholder="Prénom"
                   className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all text-sm"
                 />
                 <input
                   type="text"
-                  placeholder="Last Name"
+                  placeholder="Nom"
                   className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all text-sm"
                 />
               </div>
               <input
                 type="email"
-                placeholder="Email Address"
+                placeholder="Adresse e-mail"
                 className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all text-sm"
               />
               <input
                 type="tel"
-                placeholder="Phone Number"
+                placeholder="Numéro de téléphone"
                 className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all text-sm"
               />
               <select
                 className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white/50 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all text-sm appearance-none"
                 defaultValue=""
               >
-                <option value="" disabled>I&apos;m interested in...</option>
-                <option value="buying">Buying a Residence</option>
-                <option value="viewing">Private Viewing</option>
-                <option value="investment">Investment Inquiry</option>
-                <option value="other">Other</option>
+                <option value="" disabled>Je suis intéressé(e) par...</option>
+                <option value="buying">Acheter une Résidence</option>
+                <option value="viewing">Visite Privée</option>
+                <option value="investment">Demande d&apos;Investissement</option>
+                <option value="other">Autre</option>
               </select>
               <textarea
-                placeholder="Your message..."
+                placeholder="Votre message..."
                 rows={4}
                 className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all text-sm resize-none"
               ></textarea>
               <button
                 type="button"
-                className="w-full bg-white text-black font-bold py-4 rounded-xl text-sm uppercase tracking-[0.2em] hover:bg-zinc-200 transition-colors mt-2"
+                className="w-full bg-[#005433] text-white font-bold py-4 rounded-xl text-sm uppercase tracking-[0.2em] hover:bg-[#006a40] transition-colors mt-2 shadow-lg shadow-[#005433]/20"
               >
-                Send Message
+                Envoyer le Message
               </button>
             </form>
           </div>
@@ -160,12 +160,12 @@ export default function ContactPage() {
 
       {/* CTA */}
       <section className="reveal relative w-full py-32 flex flex-col items-center text-center px-6 border-t border-white/10">
-        <h2 className="text-4xl md:text-7xl font-bold tracking-tight mb-10">Explore the collection</h2>
+        <h2 className="text-4xl md:text-7xl font-bold tracking-tight mb-10">Explorez la collection</h2>
         <Link
           href="/apartments"
-          className="inline-flex items-center gap-4 bg-white text-black px-12 py-6 rounded-full text-sm uppercase tracking-[0.2em] font-bold hover:scale-105 transition-transform"
+          className="inline-flex items-center gap-4 bg-[#005433] text-white px-12 py-6 rounded-full text-sm uppercase tracking-[0.2em] font-bold hover:bg-[#006a40] hover:scale-105 transition-all shadow-lg shadow-[#005433]/20"
         >
-          View Apartments
+          Voir les Appartements
           <ArrowRight className="w-5 h-5" />
         </Link>
       </section>
@@ -173,11 +173,11 @@ export default function ContactPage() {
       {/* Footer */}
       <footer className="relative bg-black border-t border-white/10 py-12 px-6 md:px-20">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-white/30 gap-4">
-          <p>&copy; {new Date().getFullYear()} RDC Residences. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} RDC Résidences. Tous droits réservés.</p>
           <div className="flex gap-8">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">Accueil</Link>
             <Link href="/apartments" className="hover:text-white transition-colors">Collection</Link>
-            <Link href="/about" className="hover:text-white transition-colors">About</Link>
+            <Link href="/about" className="hover:text-white transition-colors">À Propos</Link>
           </div>
         </div>
       </footer>
