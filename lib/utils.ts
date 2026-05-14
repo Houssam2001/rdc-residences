@@ -7,6 +7,7 @@ export interface ApartmentData {
   rawName: string;
   imagePath: string;
   slug: string;
+  colorImagePath?: string;
 }
 
 export function cn(...inputs: ClassValue[]) {
