@@ -8,6 +8,8 @@ export interface ApartmentData {
   imagePath: string;
   slug: string;
   colorImagePath?: string;
+  bwImagePath?: string | null;
+  galleryImages?: string[];
 }
 
 export function cn(...inputs: ClassValue[]) {

@@ -25,22 +25,45 @@ export default async function ApartmentPage({ params }: { params: Promise<{ slug
   const { slug } = await params;
   
   const apartmentsDir = path.join(process.cwd(), "public/apartments");
+  const bwDir = path.join(process.cwd(), "public/bw-aparments");
   let foundApartment = null;
 
   try {
     if (fs.existsSync(apartmentsDir)) {
       const files = fs.readdirSync(apartmentsDir).filter(f => f.endsWith(".png"));
+      
+      // Get all bw images for gallery matching
+      const bwFiles = fs.existsSync(bwDir)
+        ? fs.readdirSync(bwDir).filter(f => f.endsWith(".png"))
+        : [];
+
       for (let i = 0; i < files.length; i++) {
         const file = files[i];
         const cleanName = cleanApartmentName(file);
         const fileSlug = createSlug(cleanName);
         if (fileSlug === slug) {
+          // Find matching bw image (same filename) or any bw image sharing the same number prefix
+          const numberPrefix = file.match(/^(\d+)/)?.[1];
+          const bwMatch = bwFiles.find(bf => bf === file)
+            || (numberPrefix ? bwFiles.find(bf => bf.startsWith(numberPrefix)) : null);
+
+          // Also find other color images with the same number prefix for gallery
+          const relatedColorImages = numberPrefix
+            ? files.filter(f => f.startsWith(numberPrefix) && f !== file)
+            : [];
+
           foundApartment = {
             id: i.toString(),
             name: cleanName,
             rawName: file.replace(".png", ""),
             imagePath: file,
-            slug: fileSlug
+            slug: fileSlug,
+            bwImagePath: bwMatch || null,
+            galleryImages: [
+              file,
+              ...(bwMatch ? [bwMatch] : []),
+              ...relatedColorImages,
+            ],
           };
           break;
         }

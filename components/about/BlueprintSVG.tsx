@@ -17,7 +17,7 @@ const pathVariants = {
       pathLength: {
         duration: 2.5,
         delay: i * 0.15,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
       },
       opacity: { duration: 0.4, delay: i * 0.15 },
     },

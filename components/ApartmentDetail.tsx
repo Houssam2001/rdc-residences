@@ -10,6 +10,13 @@ import { ApartmentData } from "@/lib/utils";
 
 export default function ApartmentDetail({ apartment }: { apartment: ApartmentData }) {
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
+  const [activeImage, setActiveImage] = useState(0);
+
+  // Build gallery: color from /apartments, bw from /bw-aparments
+  const gallery = (apartment.galleryImages || [apartment.imagePath]).map((img) => {
+    const isBw = apartment.bwImagePath && img === apartment.bwImagePath;
+    return { src: (isBw ? "/bw-aparments/" : "/apartments/") + img, label: isBw ? "N&B" : "Couleur" };
+  });
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -76,10 +83,10 @@ export default function ApartmentDetail({ apartment }: { apartment: ApartmentDat
       {/* ===== HERO ===== */}
       <section className="relative w-full h-screen">
         <Image
-          src={"/apartments/" + apartment.imagePath}
+          src={gallery[activeImage]?.src || "/apartments/" + apartment.imagePath}
           alt={apartment.name}
           fill
-          className="object-cover"
+          className="object-cover transition-opacity duration-700"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#3D4536]/70 via-transparent to-[#3D4536]/20" />
@@ -93,19 +100,28 @@ export default function ApartmentDetail({ apartment }: { apartment: ApartmentDat
 
         {/* Pill Badges */}
         <div className="hero-pills absolute bottom-6 md:bottom-8 left-6 md:left-16 flex gap-3 opacity-0">
-          <span className="bg-[#B8C4A2]/80 backdrop-blur-sm text-[#3D4536] text-xs font-semibold px-5 py-2 rounded-full">
-            3 Chambres
-          </span>
-          <span className="bg-[#B8C4A2]/80 backdrop-blur-sm text-[#3D4536] text-xs font-semibold px-5 py-2 rounded-full">
-            3 SdB
-          </span>
-          <span className="bg-[#B8C4A2]/80 backdrop-blur-sm text-[#3D4536] text-xs font-semibold px-5 py-2 rounded-full">
-            185 m²
-          </span>
-          <span className="bg-[#B8C4A2]/80 backdrop-blur-sm text-[#3D4536] text-xs font-semibold px-5 py-2 rounded-full">
-            {exposure}
-          </span>
+          <span className="bg-[#B8C4A2]/80 backdrop-blur-sm text-[#3D4536] text-xs font-semibold px-5 py-2 rounded-full">3 Chambres</span>
+          <span className="bg-[#B8C4A2]/80 backdrop-blur-sm text-[#3D4536] text-xs font-semibold px-5 py-2 rounded-full">3 SdB</span>
+          <span className="bg-[#B8C4A2]/80 backdrop-blur-sm text-[#3D4536] text-xs font-semibold px-5 py-2 rounded-full">185 m²</span>
+          <span className="bg-[#B8C4A2]/80 backdrop-blur-sm text-[#3D4536] text-xs font-semibold px-5 py-2 rounded-full">{exposure}</span>
         </div>
+
+        {/* Gallery Thumbnails */}
+        {gallery.length > 1 && (
+          <div className="absolute bottom-6 md:bottom-8 right-6 md:right-16 flex gap-3">
+            {gallery.map((img, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveImage(i)}
+                className={`relative w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
+                  activeImage === i ? "border-white shadow-xl scale-110" : "border-white/30 opacity-70 hover:opacity-100"
+                }`}
+              >
+                <Image src={img.src} alt={img.label} fill className="object-cover" />
+              </button>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* ===== OVERVIEW SPLIT ===== */}
@@ -162,19 +178,20 @@ export default function ApartmentDetail({ apartment }: { apartment: ApartmentDat
       </section>
 
       {/* ===== ZONES ACCORDION ===== */}
-      <section className="reveal w-full px-6 md:px-16 py-24 md:py-40">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
-          {/* Left — Image */}
-          <div className="relative aspect-[3/4] rounded-[2.5rem] overflow-hidden">
+      <section className="reveal relative w-full overflow-hidden py-24 md:py-40">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
+          {/* Left — Image with background removed via blend */}
+          <div className="relative h-[500px] md:h-[700px]">
             <Image
-              src={"/apartments/" + apartment.imagePath}
-              alt="Plan"
+              src={apartment.bwImagePath ? "/bw-aparments/" + apartment.bwImagePath : "/apartments/" + apartment.imagePath}
+              alt="Composition"
               fill
-              className="object-cover"
+              className="object-contain mix-blend-multiply"
             />
           </div>
+
           {/* Right — Accordion */}
-          <div className="flex flex-col justify-center">
+          <div className="px-6 md:px-16">
             <p className="text-[10px] uppercase tracking-[0.4em] text-[#3D4536]/50 mb-6 font-semibold">Espaces de Vie</p>
             <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-12" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
               Composition
