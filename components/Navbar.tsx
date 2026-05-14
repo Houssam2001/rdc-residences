@@ -9,8 +9,8 @@ export default function Navbar() {
       <div className="hidden md:flex items-center gap-10 text-[13px] uppercase tracking-[0.2em] font-medium text-white/80">
         <Link href="/" className="hover:text-white transition-colors">Home</Link>
         <Link href="/apartments" className="hover:text-white transition-colors">The Collection</Link>
-        <a href="#" className="hover:text-white transition-colors">About</a>
-        <a href="#" className="hover:text-white transition-colors">Contact</a>
+        <Link href="/about" className="hover:text-white transition-colors">About</Link>
+        <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
       </div>
       <Link href="/apartments" className="text-[11px] bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2.5 uppercase tracking-[0.2em] font-medium text-white hover:bg-white/20 transition-all">
         Explore

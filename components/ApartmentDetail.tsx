@@ -14,7 +14,7 @@ export default function ApartmentDetail({ apartment }: { apartment: ApartmentDat
 
     // Fade in sections
     gsap.utils.toArray<HTMLElement>('.fade-up').forEach((el) => {
-      gsap.fromTo(el, 
+      gsap.fromTo(el,
         { y: 30, opacity: 0 },
         {
           y: 0, opacity: 1, duration: 0.8, ease: "power2.out",
@@ -51,7 +51,7 @@ export default function ApartmentDetail({ apartment }: { apartment: ApartmentDat
       </nav>
 
       <main className="max-w-[1400px] mx-auto px-6 md:px-10 py-8">
-        
+
         {/* Header Section */}
         <div className="fade-up mb-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-4">
@@ -77,11 +77,11 @@ export default function ApartmentDetail({ apartment }: { apartment: ApartmentDat
         <div className="fade-up w-full h-[400px] md:h-[600px] grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4 rounded-2xl overflow-hidden mb-12">
           {/* Main Large Image */}
           <div className="md:col-span-3 relative w-full h-full group cursor-pointer">
-            <Image 
-              src={"/apartments/" + apartment.imagePath} 
-              alt={apartment.name} 
-              fill 
-              className="object-cover group-hover:scale-105 transition-transform duration-700" 
+            <Image
+              src={"/apartments/" + apartment.imagePath}
+              alt={apartment.name}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
               priority
             />
             <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
@@ -102,10 +102,10 @@ export default function ApartmentDetail({ apartment }: { apartment: ApartmentDat
 
         {/* Two Column Layout */}
         <div className="flex flex-col lg:flex-row gap-12">
-          
+
           {/* Left Column (Main Content) */}
           <div className="w-full lg:w-2/3">
-            
+
             {/* Quick Specs */}
             <div className="fade-up flex flex-wrap gap-8 py-6 border-y border-zinc-200 mb-10">
               <div className="flex items-center gap-3">
@@ -136,7 +136,7 @@ export default function ApartmentDetail({ apartment }: { apartment: ApartmentDat
               <h2 className="text-2xl font-bold text-zinc-900 mb-6">Property Description</h2>
               <div className="prose prose-zinc max-w-none text-zinc-600 leading-relaxed">
                 <p>
-                  <strong>{apartment.name}</strong> features an elegantly designed layout offering unparalleled modern living. 
+                  <strong>{apartment.name}</strong> features an elegantly designed layout offering unparalleled modern living.
                   Each residence boasts spacious living areas, state-of-the-art kitchens, and private terraces that provide breathtaking views and a seamless connection to the serene surroundings.
                 </p>
                 <p className="mt-4">
@@ -184,36 +184,36 @@ export default function ApartmentDetail({ apartment }: { apartment: ApartmentDat
             <div className="sticky top-24 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-zinc-100 p-8">
               <h3 className="text-xl font-bold text-zinc-900 mb-2">Interested in this property?</h3>
               <p className="text-sm text-zinc-500 mb-6">Contact our agents to arrange a viewing or request more details.</p>
-              
+
               <form className="flex flex-col gap-4">
-                <input 
-                  type="text" 
-                  placeholder="Full Name" 
+                <input
+                  type="text"
+                  placeholder="Full Name"
                   className="w-full px-4 py-3 rounded-lg border border-zinc-200 bg-zinc-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#243462]/20 transition-all text-sm"
                 />
-                <input 
-                  type="email" 
-                  placeholder="Email Address" 
+                <input
+                  type="email"
+                  placeholder="Email Address"
                   className="w-full px-4 py-3 rounded-lg border border-zinc-200 bg-zinc-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#243462]/20 transition-all text-sm"
                 />
-                <input 
-                  type="tel" 
-                  placeholder="Phone Number" 
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
                   className="w-full px-4 py-3 rounded-lg border border-zinc-200 bg-zinc-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#243462]/20 transition-all text-sm"
                 />
-                <textarea 
-                  placeholder="I would like more information about this property..." 
+                <textarea
+                  placeholder="I would like more information about this property..."
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg border border-zinc-200 bg-zinc-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#243462]/20 transition-all text-sm resize-none"
                 ></textarea>
-                
-                <button 
+
+                <button
                   type="button"
                   className="w-full bg-[#243462] text-white font-semibold py-4 rounded-lg mt-2 hover:bg-[#1a2649] transition-colors shadow-lg shadow-[#243462]/20"
                 >
                   Send Inquiry
                 </button>
-                <button 
+                <button
                   type="button"
                   className="w-full bg-white text-[#243462] border border-[#243462]/20 font-semibold py-4 rounded-lg hover:bg-zinc-50 transition-colors"
                 >
