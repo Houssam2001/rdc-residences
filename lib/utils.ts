@@ -1,6 +1,12 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
+export interface ApartmentComposition {
+  zone: string;
+  desc: string;
+  markerPosition: { top: string; left: string };
+}
+
 export interface ApartmentData {
   id: string;
   name: string;
@@ -10,6 +16,7 @@ export interface ApartmentData {
   colorImagePath?: string;
   bwImagePath?: string | null;
   galleryImages?: string[];
+  composition?: ApartmentComposition[];
 }
 
 export function cn(...inputs: ClassValue[]) {

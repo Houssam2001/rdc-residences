@@ -75,11 +75,11 @@ export default function ApartmentDetail({ apartment }: { apartment: ApartmentDat
 
   const exposure = apartment.name.includes("Sud") ? "Sud" : apartment.name.includes("Nord") ? "Nord" : "Panoramique";
 
-  const features = [
-    { zone: "Séjour & Salle à Manger", desc: "Espace ouvert baigné de lumière naturelle grâce aux baies vitrées du sol au plafond. Conçu pour la convivialité et le confort quotidien." },
-    { zone: "Cuisine Équipée", desc: "Cuisine européenne entièrement intégrée avec comptoirs en pierre naturelle, électroménagers haut de gamme et îlot central fonctionnel." },
-    { zone: "Suite Parentale", desc: "Chambre principale avec dressing intégré et salle de bain privative. Terrasse accessible directement depuis la suite." },
-    { zone: "Terrasse Privée", desc: "Espace extérieur généreux offrant une vue panoramique sur le paysage environnant. Idéal pour les moments de détente." },
+  const features = apartment.composition || [
+    { zone: "Séjour & Salle à Manger", desc: "Espace ouvert baigné de lumière naturelle grâce aux baies vitrées du sol au plafond. Conçu pour la convivialité et le confort quotidien.", markerPosition: { top: "35%", left: "45%" } },
+    { zone: "Cuisine Équipée", desc: "Cuisine européenne entièrement intégrée avec comptoirs en pierre naturelle, électroménagers haut de gamme et îlot central fonctionnel.", markerPosition: { top: "55%", left: "65%" } },
+    { zone: "Suite Parentale", desc: "Chambre principale avec dressing intégré et salle de bain privative. Terrasse accessible directement depuis la suite.", markerPosition: { top: "25%", left: "60%" } },
+    { zone: "Terrasse Privée", desc: "Espace extérieur généreux offrant une vue panoramique sur le paysage environnant. Idéal pour les moments de détente.", markerPosition: { top: "65%", left: "35%" } },
   ];
 
   const specs = [
@@ -232,17 +232,8 @@ export default function ApartmentDetail({ apartment }: { apartment: ApartmentDat
               className="object-contain"
             />
             {/* Interactive Markers */}
-            {features.map((f, i) => {
-              // Predefined scatter coordinates for the markers to look natural over a blueprint
-              const markerPositions = [
-                { top: "35%", left: "45%" },
-                { top: "55%", left: "65%" },
-                { top: "25%", left: "60%" },
-                { top: "65%", left: "35%" },
-                { top: "45%", left: "25%" },
-                { top: "75%", left: "55%" },
-              ];
-              const pos = markerPositions[i % markerPositions.length];
+            {features.map((f: any, i: number) => {
+              const pos = f.markerPosition || { top: "50%", left: "50%" };
               const isOpen = openAccordion === i;
 
               return (
