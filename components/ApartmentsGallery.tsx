@@ -201,10 +201,10 @@ export default function ApartmentsGallery({
                 <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
                   {/* BW image (base) */}
                   <Image
-                    src={"/bw-aparments/" + apt.imagePath}
+                    src={"/bw-apartments-transparent/" + apt.imagePath}
                     alt={apt.name}
                     fill
-                    className="object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.08]"
+                    className="object-cover transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.08] group-hover:opacity-0"
                   />
 
                   {/* Color image (reveal on hover) */}

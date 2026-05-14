@@ -25,7 +25,7 @@ export default async function ApartmentPage({ params }: { params: Promise<{ slug
   const { slug } = await params;
   
   const apartmentsDir = path.join(process.cwd(), "public/apartments");
-  const bwDir = path.join(process.cwd(), "public/bw-aparments");
+  const bwDir = path.join(process.cwd(), "public/bw-apartments-transparent");
   let foundApartment = null;
 
   try {
